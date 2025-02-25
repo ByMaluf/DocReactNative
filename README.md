@@ -8,4 +8,9 @@
    npx @react-native-community/cli@latest init myFirstProject
 ```
 
+1. **Com o framework Expo**:
+
+```bash
+npx create-expo-app@latest
+```
   

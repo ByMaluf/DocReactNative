@@ -27,4 +27,8 @@ Além disso, o **Expo Application Services (EAS)** complementa o processo de des
 
 Escolha Expo para facilidade e rapidez, e React Native CLI para maior controle e customização.
 
-https://reactnavigation.org/
+_____________________________________________
+📊 Ranking das bibliotecas mais usadas para navegação:
+1️⃣ React Navigation → Melhor para a maioria dos apps
+2️⃣ React Native Navigation (Wix) → Melhor para apps grandes com navegação nativa real
+3️⃣ Expo Router → Melhor para quem usa Expo e quer algo simples

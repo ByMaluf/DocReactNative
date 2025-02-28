@@ -27,3 +27,4 @@ Além disso, o **Expo Application Services (EAS)** complementa o processo de des
 
 Escolha Expo para facilidade e rapidez, e React Native CLI para maior controle e customização.
 
+https://reactnavigation.org/

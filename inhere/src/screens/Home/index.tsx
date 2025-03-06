@@ -5,7 +5,11 @@ import { Participant } from '../../components/Participant';
 export default function Home() {
 
   function handleParticipantAdd() {
-    console.log('Vc clicou no botão de adicionar');
+    console.log('Vc clicou no botão de adicionar participante');
+  }
+
+  function handleParticipantRemove() {
+    console.log('Vc clicou em remover o participante')
   }
 
   return (
@@ -29,10 +33,10 @@ export default function Home() {
         </TouchableOpacity>
       </View>
 
-      <Participant />
-      <Participant />
-      <Participant />
-      <Participant />
+      <Participant name="Brenno" onRemove={handleParticipantRemove} />
+      <Participant name="Vini" onRemove={handleParticipantRemove} />
+      <Participant name="Diego" onRemove={handleParticipantRemove} />
+      <Participant name="Biro" onRemove={handleParticipantRemove} />
     </View>
   );
 }

@@ -1,18 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { Container } from './style';
 
 export function Groups() {
   return (
-    <View style={styles.container}>
-      <Text>Groups</Text>
-    </View>
+    <Container>
+      <Text style={styles.text}>Groups</Text>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  text: {
+    color: '#FFF',
+    fontSize: 32
+  }
 });

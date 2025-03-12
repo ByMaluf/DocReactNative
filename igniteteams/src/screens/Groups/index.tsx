@@ -1,9 +1,11 @@
-import { Container, Title } from './style';
+import { Text } from 'react-native';
+import { Container } from './style';
+import { Header } from '@components/Header';
 
 export function Groups() {
   return (
     <Container>
-      <Title>Groups</Title>
+      <Header />
     </Container>
   );
 }

@@ -3,6 +3,9 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
     "paths": {
       "@assets/*": [
         "./src/assets/*"

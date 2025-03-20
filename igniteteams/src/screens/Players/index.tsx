@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FlatList } from "react-native";
-import { Container, Form, HeaderList, NumbersOfPlayers } from "./style";
+import { Container, Form, HeaderList, NumberOfPlayers } from "./style";
 import { Header } from "@components/Header";
 import { Filter } from "@components/Filter";
 import { ButtonIcon } from "@components/ButtonIcon";
@@ -13,7 +13,7 @@ import Button from "@components/Button";
 export function Players() {
 
   const [team, setTeam] = useState('Time A');
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState(['Brenno']);
 
   return (
     <Container>
@@ -45,9 +45,9 @@ export function Players() {
           horizontal
         />
 
-        <NumbersOfPlayers>
+        <NumberOfPlayers>
           {players.length}
-        </NumbersOfPlayers>
+        </NumberOfPlayers>
       </HeaderList>
 
       <FlatList

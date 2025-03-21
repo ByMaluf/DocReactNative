@@ -17,11 +17,11 @@ export function AppRoutes() {
       />
       <Screen
         name='new'
-        component={Players}
+        component={NewGroup}
       />
       <Screen
         name='players'
-        component={NewGroup}
+        component={Players}
       />
     </Navigator>
   );

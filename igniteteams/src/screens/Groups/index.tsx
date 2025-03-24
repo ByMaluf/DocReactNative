@@ -3,10 +3,11 @@ import { Header } from '@components/Header';
 import HighLight from '@components/Highlight';
 import GroupCard from '@components/GroupCard';
 import ListEmpty from '@components/ListEmpty';
-import { useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { FlatList } from 'react-native';
 import Button from '@components/Button';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { groupsGetAll } from '@storage/group/groupsGetAll';
 
 export function Groups() {
 
@@ -17,6 +18,20 @@ export function Groups() {
     navigation.navigate('new')
     // navigate('players', { group: 'Galera do Ignite' });
   }
+
+  async function fetchGroups() {
+    try {
+      const data = await groupsGetAll();
+      setGroups(data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    console.log('UseEffect executou')
+    fetchGroups();
+  }, [])
 
   return (
     <Container>

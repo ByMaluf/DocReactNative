@@ -28,10 +28,16 @@ export function Groups() {
     }
   }
 
-  useEffect(() => {
-    console.log('UseEffect executou')
-    fetchGroups();
-  }, [])
+  function handleOpenGroup(group: string) {
+    navigation.navigate('players', { group })
+  }
+
+  useFocusEffect(
+    useCallback(() => {
+      fetchGroups();
+    }, [])
+  )
+  console.log('UseEffect executou')
 
   return (
     <Container>
@@ -43,7 +49,9 @@ export function Groups() {
         keyExtractor={item => item}
         renderItem={({ item }) => (
           <GroupCard
-            title={item} />
+            title={item}
+            onPress={() => handleOpenGroup(item)}
+          />
         )}
         contentContainerStyle={groups.length === 0 && { flex: 1 }}
         ListEmptyComponent={() => (

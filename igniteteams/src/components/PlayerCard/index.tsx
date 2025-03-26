@@ -1,7 +1,6 @@
 import { ButtonIcon } from '@components/ButtonIcon';
 import { Container, Icon, Name } from './style'
 
-
 type Props = {
   name: string
   onRemove: () => void

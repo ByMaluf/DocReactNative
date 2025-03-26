@@ -66,10 +66,11 @@ export function Players() {
       setIsLoading(true);
       const playersByTeam = await playersGetByGroupAndTeam(group, team);
       setPlayers(playersByTeam)
-      setIsLoading(prev => !prev);
     } catch (error) {
       console.log(error)
       Alert.alert('Pessoas', 'Não foi possível carregar as pessoas do time selecionado.')
+    } finally {
+      setIsLoading(prev => !prev)
     }
   }
 

@@ -33,12 +33,13 @@ export function AppRoutes<AppRoutes>() {
       tabBarShowLabel: false,
       tabBarActiveTintColor: tokens.colors.green500,
       tabBarInactiveTintColor: tokens.colors.gray200,
+      tabBarLabelPosition: "beside-icon",
       tabBarStyle: {
         backgroundColor: tokens.colors.gray600,
         borderTopWidth: 0,
         height: Platform.OS === 'android' ? 'auto' : 96,
         paddingBottom: tokens.space['10'],
-        paddingTop: tokens.space['6']
+        paddingTop: tokens.space['6'],
       },
     }}>
       <Screen
